@@ -7,12 +7,13 @@ int main(void) {
 		printf("chyba: Soubor nelze otevrit pro cteni.\n");
 		return 1;
 	}
-	char buffer[1024];
+	char buffer[1024];  //vytvoreni pole
 	int pocitadlo = 0;
 	while (fgets(buffer, sizeof(buffer), soubor) != NULL) {
 		pocitadlo++;
 		printf("%d %s", pocitadlo, buffer);
 		}
+	printf("\n");
 
 	if (fclose(soubor) == EOF) {
 		printf("chyba: soubor se nepodarilo zavrit.\n");
